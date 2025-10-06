@@ -5,6 +5,8 @@ from airflow.utils.dates import days_ago
 from datetime import timedelta
 from airflow.operators.dagrun_operator import TriggerDagRunOperator
 
+# this DAG creates dimension and fact tables in Redshift and loads data from S3
+
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
